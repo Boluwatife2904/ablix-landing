@@ -1,5 +1,5 @@
 export function useDeviceType() {
-	const isOnMobile = ref(false);
+	const isOnMobile = ref(true);
 
 	const checkScreenWidth = () => {
 		isOnMobile.value = window.innerWidth <= 600;
