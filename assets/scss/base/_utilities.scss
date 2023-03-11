@@ -1,19 +1,63 @@
-.flex {
-    display: flex;
-}
-
-.flex-column {
-    flex-direction: column;
-}
-
 .space-between {
-    justify-content: space-between;
+	justify-content: space-between;
 }
 
 .items-center {
-    align-items: center;
+	align-items: center;
 }
 
-.flex-wrap {
-    flex-wrap: wrap;
+// Display classes
+$displays: flex, block, grid;
+@each $display in $displays {
+	.#{$display} {
+		display: $display;
+	}
+}
+
+// Flex Direction classes
+$flex-directions: column;
+@each $flex-direction in $flex-directions {
+	.flex-#{$flex-direction} {
+		flex-direction: $flex-direction;
+	}
+}
+
+// Flex Wraps classes
+$flex-wraps: wrap;
+@each $flex-wrap in $flex-wraps {
+	.flex-#{$flex-wrap} {
+		flex-wrap: $flex-wrap;
+	}
+}
+
+// Font weight classes
+$font-weights: 400, 500, 600, 700;
+@each $font-weight in $font-weights {
+	.weight-#{"" + $font-weight} {
+		font-weight: $font-weight;
+	}
+}
+
+// Text transform classes
+$text-transforms: uppercase, capitalize;
+@each $text-transform in $text-transforms {
+	.text-#{"" + $text-transform} {
+		text-transform: $text-transform;
+	}
+}
+
+.text-black {
+	color: var(--black-color);
+}
+
+.text-light-grey {
+	color: var(--light-grey-color);
+}
+
+.text-white {
+	color: #fff;
+}
+
+.text-paragraph {
+    color: var(--paragraph-color);
 }

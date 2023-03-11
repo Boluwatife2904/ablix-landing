@@ -1,9 +1,10 @@
 <script lang="ts" setup></script>
 
 <template>
-	<div>
+	<main>
+        <HomeTestimonials />
 		<TheCallToAction />
-	</div>
+	</main>
 </template>
 
 <style lang="scss" scoped></style>

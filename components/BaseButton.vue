@@ -44,9 +44,25 @@ const buttonClasses = computed(() => {
 		@include button-size(3.6rem, 3.6rem, 9rem, 9rem);
 	}
 
+	&--rounded-small {
+		border-radius: 50%;
+		@include button-size(2.8rem, 2.8rem, 4.4rem, 4.4rem);
+	}
+
 	&--solid-orange {
 		background-color: var(--primary-color);
 		color: #fff;
+	}
+
+	&--outline-grey {
+		border: 1px solid #d8d0c7;
+		background-color: transparent;
+		color: #110804;
+
+		&:hover {
+			background-color: var(--primary-color);
+			color: #fff;
+		}
 	}
 }
 </style>

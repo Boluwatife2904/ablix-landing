@@ -5,6 +5,29 @@ body {
 	font-size: 1.6rem;
 }
 
-.satoshi-text {
+.satoshi-font {
 	font-family: "Satoshi", sans-serif;
+}
+
+.heading-2 {
+	@include font-sizing(2.6rem, 3.6rem, 3rem, 3.8rem, 4rem, 5rem);
+	letter-spacing: -0.02em;
+}
+
+.heading-3 {
+}
+
+.heading-6 {
+	@include font-sizing(1.4rem, 2.4rem, 1.6rem, 2.8rem, 2rem, 3rem);
+}
+
+.paragraph-1 {
+}
+
+.paragraph-2 {
+	@include font-sizing(1.2rem, 2.2rem, 1.4rem, 2.4rem, 1.4rem, 2.4rem);
+}
+
+.body-small {
+	@include font-sizing(1rem, 2rem, 1.4rem, 2.4rem, 1.4rem, 2.4rem);
 }

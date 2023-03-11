@@ -1,0 +1,14 @@
+@mixin font-sizing($mobile-font-size, $mobile-line-height, $tablet-font-size, $tablet-line-height, $desktop-font-size, $desktop-line-height) {
+	font-size: $mobile-font-size;
+	line-height: $mobile-line-height;
+
+	@media screen and (min-width: 600px) {
+		font-size: $tablet-font-size;
+		line-height: $tablet-line-height;
+	}
+
+    @media screen and (min-width: 992px) {
+		font-size: $desktop-font-size;
+		line-height: $desktop-line-height;
+	}
+}

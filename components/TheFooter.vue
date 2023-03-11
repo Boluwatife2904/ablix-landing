@@ -30,13 +30,13 @@
 					<h3 class="footer__heading">FOLLOW US HERE</h3>
 					<ul class="footer__socials flex flex-column">
 						<li>
-							<a href="#" class="footer__social-link flex items-center space-between" target="_blank" rel="noopener noreferrer">Instagram <IconsArrow width="12" height="12" fill="#110804" /> </a>
+							<a href="#" class="footer__social-link flex items-center space-between" target="_blank" rel="noopener noreferrer">Instagram <IconsArrow size="12" fill="#110804" /> </a>
 						</li>
 						<li>
-							<a href="#" class="footer__social-link flex items-center space-between" target="_blank" rel="noopener noreferrer">Twitter <IconsArrow width="12" height="12" fill="#110804" /> </a>
+							<a href="#" class="footer__social-link flex items-center space-between" target="_blank" rel="noopener noreferrer">Twitter <IconsArrow size="12" fill="#110804" /> </a>
 						</li>
 						<li>
-							<a href="#" class="footer__social-link flex items-center space-between" target="_blank" rel="noopener noreferrer">Email <IconsArrow width="12" height="12" fill="#110804" /> </a>
+							<a href="#" class="footer__social-link flex items-center space-between" target="_blank" rel="noopener noreferrer">Email <IconsArrow size="12" fill="#110804" /> </a>
 						</li>
 					</ul>
 				</div>
@@ -94,7 +94,7 @@
 		font-weight: 500;
 		font-size: 1.4rem;
 		line-height: 2.4rem;
-		color: var(--heading-color);
+		color: var(--black-color);
 		border-bottom: 0.1rem solid #dfd8ce;
 		margin-bottom: 1.8rem;
 
