@@ -2,6 +2,7 @@
 
 <template>
 	<main>
+        <HomeProcess />
         <HomeTestimonials />
 		<TheCallToAction />
 	</main>

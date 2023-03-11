@@ -1,52 +1,54 @@
 <script lang="ts" setup></script>
 
 <template>
-	<footer class="footer">
-		<div class="footer__top">
-			<div class="footer__left">
-				<div class="footer__wrapper">
-					<h3 class="footer__heading">MENU</h3>
-					<ul class="footer__links flex flex-wrap flex-column">
-						<li>
-							<nuxt-link to="#" class="footer__link-item">Home</nuxt-link>
-						</li>
-						<li>
-							<nuxt-link to="#" class="footer__link-item">About Us</nuxt-link>
-						</li>
-						<li>
-							<nuxt-link to="#" class="footer__link-item">Portfolio</nuxt-link>
-						</li>
-						<li>
-							<nuxt-link to="#" class="footer__link-item">Reviews</nuxt-link>
-						</li>
-						<li>
-							<nuxt-link to="#" class="footer__link-item">Contact Us</nuxt-link>
-						</li>
-					</ul>
+	<section class="container">
+		<footer class="footer">
+			<div class="footer__top">
+				<div class="footer__left">
+					<div class="footer__wrapper">
+						<h3 class="footer__heading heading-6 weight-500 text-black">MENU</h3>
+						<ul class="footer__links flex flex-wrap flex-column">
+							<li>
+								<nuxt-link to="#" class="footer__link-item">Home</nuxt-link>
+							</li>
+							<li>
+								<nuxt-link to="#" class="footer__link-item">About Us</nuxt-link>
+							</li>
+							<li>
+								<nuxt-link to="#" class="footer__link-item">Portfolio</nuxt-link>
+							</li>
+							<li>
+								<nuxt-link to="#" class="footer__link-item">Reviews</nuxt-link>
+							</li>
+							<li>
+								<nuxt-link to="#" class="footer__link-item">Contact Us</nuxt-link>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="footer__right">
+					<div class="footer__wrapper footer__wrapper--right">
+						<h3 class="footer__heading heading-6 weight-500 text-black">FOLLOW US HERE</h3>
+						<ul class="footer__socials flex flex-column">
+							<li>
+								<a href="#" class="footer__social-link flex items-center space-between" target="_blank" rel="noopener noreferrer">Instagram <IconsArrow size="12" fill="#110804" /> </a>
+							</li>
+							<li>
+								<a href="#" class="footer__social-link flex items-center space-between" target="_blank" rel="noopener noreferrer">Twitter <IconsArrow size="12" fill="#110804" /> </a>
+							</li>
+							<li>
+								<a href="#" class="footer__social-link flex items-center space-between" target="_blank" rel="noopener noreferrer">Email <IconsArrow size="12" fill="#110804" /> </a>
+							</li>
+						</ul>
+					</div>
 				</div>
 			</div>
-			<div class="footer__right">
-				<div class="footer__wrapper footer__wrapper--right">
-					<h3 class="footer__heading">FOLLOW US HERE</h3>
-					<ul class="footer__socials flex flex-column">
-						<li>
-							<a href="#" class="footer__social-link flex items-center space-between" target="_blank" rel="noopener noreferrer">Instagram <IconsArrow size="12" fill="#110804" /> </a>
-						</li>
-						<li>
-							<a href="#" class="footer__social-link flex items-center space-between" target="_blank" rel="noopener noreferrer">Twitter <IconsArrow size="12" fill="#110804" /> </a>
-						</li>
-						<li>
-							<a href="#" class="footer__social-link flex items-center space-between" target="_blank" rel="noopener noreferrer">Email <IconsArrow size="12" fill="#110804" /> </a>
-						</li>
-					</ul>
-				</div>
+			<div class="footer__bottom flex space-between">
+				<p>Security & Privacy</p>
+				<p>© 2022 Ablix All Right Reserved</p>
 			</div>
-		</div>
-		<div class="footer__bottom flex space-between">
-			<p>Security & Privacy</p>
-			<p>© 2022 Ablix All Right Reserved</p>
-		</div>
-	</footer>
+		</footer>
+	</section>
 </template>
 
 <style lang="scss" scoped>
@@ -91,17 +93,8 @@
 	}
 
 	&__heading {
-		font-weight: 500;
-		font-size: 1.4rem;
-		line-height: 2.4rem;
-		color: var(--black-color);
 		border-bottom: 0.1rem solid #dfd8ce;
 		margin-bottom: 1.8rem;
-
-		@media screen and (min-width: 600px) {
-			font-size: 2rem;
-			line-height: 3rem;
-		}
 	}
 
 	&__socials {

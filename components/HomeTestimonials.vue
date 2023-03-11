@@ -11,24 +11,26 @@ const rightButtonFill = ref("#110804");
 </script>
 
 <template>
-	<section class="testimonials grid">
-		<div class="testimonials__left">
-			<p class="body-small text-light-grey text-uppercase">testimonials</p>
-			<h2 class="testimonials__header heading-2 satoshi-font text-uppercase weight-700">what clients say about us</h2>
-			<div class="testimonials__list">
-				<HomeTestimonialItem v-for="testimonial in testimonials" :key="testimonial.name" :testimonial="testimonial" />
+	<section class="container">
+		<div class="testimonials grid">
+			<div class="testimonials__left">
+				<p class="body-small text-light-grey text-uppercase">testimonials</p>
+				<h2 class="testimonials__header heading-2 satoshi-font text-uppercase weight-700">what clients say about us</h2>
+				<div class="testimonials__list">
+					<HomeTestimonialItem v-for="testimonial in testimonials" :key="testimonial.name" :testimonial="testimonial" />
+				</div>
+				<div class="testimonials__buttons flex">
+					<BaseButton button-size="rounded-small" variant="outline-grey" @mouseover="leftButtonFill = 'white'" @mouseout="leftButtonFill = '#110804'">
+						<IconsArrow :size="isOnMobile ? '12' : '16'" variant="left" :fill="leftButtonFill" />
+					</BaseButton>
+					<BaseButton button-size="rounded-small" variant="outline-grey" @mouseover="rightButtonFill = 'white'" @mouseout="rightButtonFill = '#110804'">
+						<IconsArrow :size="isOnMobile ? '12' : '16'" variant="right" :fill="rightButtonFill" />
+					</BaseButton>
+				</div>
 			</div>
-			<div class="testimonials__buttons flex">
-				<BaseButton button-size="rounded-small" variant="outline-grey" @mouseover="leftButtonFill = 'white'" @mouseout="leftButtonFill = '#110804'">
-					<IconsArrow :size="isOnMobile ? '12' : '16'" variant="left" :fill="leftButtonFill" />
-				</BaseButton>
-				<BaseButton button-size="rounded-small" variant="outline-grey" @mouseover="rightButtonFill = 'white'" @mouseout="rightButtonFill = '#110804'">
-					<IconsArrow :size="isOnMobile ? '12' : '16'" variant="right" :fill="rightButtonFill" />
-				</BaseButton>
+			<div class="testimonials__right">
+				<img class="testimonials__image block" src="/map.png" alt="Map IMage" />
 			</div>
-		</div>
-		<div class="testimonials__right">
-			<img class="testimonials__image block" src="/map.png" alt="Map IMage" />
 		</div>
 	</section>
 </template>
@@ -67,11 +69,11 @@ const rightButtonFill = ref("#110804");
 	}
 
 	&__buttons {
-        gap: 1rem;
+		gap: 1rem;
 		justify-content: center;
-        
+
 		@media screen and (min-width: 600px) {
-            margin-top: 6.6rem;
+			margin-top: 6.6rem;
 			justify-content: start;
 			gap: 1.8rem;
 		}

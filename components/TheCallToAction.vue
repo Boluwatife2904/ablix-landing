@@ -3,14 +3,16 @@ const { isOnMobile } = useDeviceType();
 </script>
 
 <template>
-	<section class="base-cta">
-		<div class="base-cta__wrapper">
-			<p class="base-cta__heading body-small text-uppercase text-light-grey">contact us</p>
-			<h2 class="base-cta__text satoshi-font weight-700 text-black heading-2 text-uppercase">
-				let’s work on <br />
-				something cool together
-			</h2>
-			<BaseButton> <IconsArrow :size="isOnMobile ? '16' : '36'" /> </BaseButton>
+	<section class="container">
+		<div class="base-cta">
+			<div class="base-cta__wrapper">
+				<p class="base-cta__heading body-small text-uppercase text-light-grey">contact us</p>
+				<h2 class="base-cta__text satoshi-font weight-700 text-black heading-2 text-uppercase">
+					let’s work on <br />
+					something cool together
+				</h2>
+				<BaseButton> <IconsArrow :size="isOnMobile ? '16' : '36'" /> </BaseButton>
+			</div>
 		</div>
 	</section>
 </template>
