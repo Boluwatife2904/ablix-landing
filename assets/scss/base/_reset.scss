@@ -1,0 +1,37 @@
+ul {
+	list-style: none;
+}
+
+a:link,
+a:visited {
+	text-decoration: none;
+	outline: none;
+}
+
+textarea {
+	resize: none;
+}
+
+button {
+    font: inherit;
+	cursor: pointer;
+	outline: none;
+	border: none;
+	background-color: transparent;
+
+	&:disabled {
+		cursor: not-allowed;
+	}
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    font-weight: 400;
+    margin-bottom: 0;
+}
