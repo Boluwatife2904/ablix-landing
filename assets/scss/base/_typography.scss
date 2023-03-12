@@ -17,11 +17,16 @@ body {
 .heading-3 {
 }
 
+.heading-4 {
+	@include font-sizing(1.6rem, 2.6rem, 2rem, 3rem, 2.6rem, 3.6rem);
+}
+
 .heading-6 {
 	@include font-sizing(1.4rem, 2.4rem, 1.6rem, 2.8rem, 2rem, 3rem);
 }
 
 .paragraph-1 {
+	@include font-sizing(1rem, 2rem, 1.4rem, 2.4rem, 1.6rem, 2.6rem);
 }
 
 .paragraph-2 {

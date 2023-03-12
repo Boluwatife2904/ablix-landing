@@ -38,6 +38,7 @@ const buttonClasses = computed(() => {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+    flex-shrink: 0;
 
 	&--rounded-large {
 		border-radius: 50%;
@@ -47,6 +48,11 @@ const buttonClasses = computed(() => {
 	&--rounded-small {
 		border-radius: 50%;
 		@include button-size(2.8rem, 2.8rem, 4.4rem, 4.4rem);
+	}
+
+    &--rounded-smallest {
+		border-radius: 50%;
+		@include button-size(2.4rem, 2.4rem, 2.4rem, 2.4rem);
 	}
 
 	&--solid-orange {

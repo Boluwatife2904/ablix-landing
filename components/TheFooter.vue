@@ -44,8 +44,8 @@
 				</div>
 			</div>
 			<div class="footer__bottom flex space-between">
-				<p>Security & Privacy</p>
-				<p>© 2022 Ablix All Right Reserved</p>
+				<p class="text-thin-3 paragraph-2">Security & Privacy</p>
+				<p class="text-thin-3 paragraph-2">© 2022 Ablix All Right Reserved</p>
 			</div>
 		</footer>
 	</section>
@@ -54,9 +54,8 @@
 <style lang="scss" scoped>
 %footer-link {
 	font-size: 1.2rem;
-	line-height: 2.6rem;
-	color: #4b423e;
 	line-height: 2.2rem;
+	color: #4b423e;
 
 	@media screen and (min-width: 600px) {
 		font-size: 1.6rem;
@@ -141,17 +140,6 @@
 		@media screen and (min-width: 600px) {
 			flex-direction: row-reverse;
 			padding-bottom: 3.1rem;
-		}
-
-		p {
-			font-size: 1rem;
-			line-height: 2rem;
-			color: #c5b7a7;
-
-			@media screen and (min-width: 600px) {
-				font-size: 1.4rem;
-				line-height: 2.4rem;
-			}
 		}
 	}
 }

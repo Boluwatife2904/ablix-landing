@@ -62,6 +62,14 @@ $text-transforms: uppercase, capitalize;
 	color: var(--paragraph-color);
 }
 
+.text-thin-2 {
+    color: var(--thin-2-color);
+}
+
+.text-thin-3 {
+    color: var(--thin-3-color);
+}
+
 .container {
 	padding: 0 1.8rem;
 	max-width: 126.4rem;
