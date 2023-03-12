@@ -1,11 +1,10 @@
 <script lang="ts" setup></script>
 
 <template>
-	<main>
-        <HomeProcess />
-        <HomeTestimonials />
-		<TheCallToAction />
-	</main>
+	<HomeRecentWorks />
+	<HomeProcess />
+	<HomeTestimonials />
+	<TheCallToAction />
 </template>
 
 <style lang="scss" scoped></style>

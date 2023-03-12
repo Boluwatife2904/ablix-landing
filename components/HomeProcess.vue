@@ -7,7 +7,7 @@ const processes = [
 	{ number: "5", title: "Design of internal pages", content: "Saving World with Good Designs. Because your satisfaction is everything. Check out our latest design of website and see how it is." },
 	{ number: "6", title: "Layout on Figma", content: "Saving World with Good Designs. Because your satisfaction is everything. Check out our latest design of website and see how it is." },
 ];
-const activeProcess = ref("2");
+const activeProcess = ref("1");
 const toggleActiveProcess = (processNumber: string) => {
 	if (processNumber === activeProcess.value) {
 		activeProcess.value = "";
