@@ -22,7 +22,7 @@ const toggleActiveProcess = (processNumber: string) => {
 		<div class="container">
 			<div class="our-process__wrapper grid">
 				<div class="our-process__left">
-					<p class="paragraph-1 text-uppercase text-thin-3">our process</p>
+					<p class="body-small text-uppercase text-thin-3">our process</p>
 					<h2 class="heading-2 text-white text-uppercase weight-700 satoshi-font">our process of working</h2>
 				</div>
 				<div class="our-process__right grid">

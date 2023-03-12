@@ -10,12 +10,12 @@ body {
 }
 
 .heading-2 {
-	@include font-sizing(2.6rem, 3.6rem, 3rem, 3.8rem, 4rem, 5rem);
+	@include font-sizing(2.4rem, 3.6rem, 2.8rem, 3.8rem, 4rem, 5rem);
 	letter-spacing: -0.02em;
 }
 
 .heading-3 {
-	@include font-sizing(1.2rem, 2.2rem, 2rem, 3rem, 3rem, 4rem);
+	@include font-sizing(1.2rem, 2.2rem, 1.8rem, 2.8rem, 3rem, 4rem);
 	letter-spacing: -0.02em;
 }
 

@@ -11,7 +11,7 @@ const recentWorks = [
 		<div class="recent-works">
 			<div class="recent-works__header">
 				<div class="recent-works__header--left">
-					<p class="paragraph-2 text-light-grey text-uppercase">our portfolio</p>
+					<p class="body-small text-light-grey text-uppercase">our portfolio</p>
 					<h2 class="heading-2 text-black text-uppercase satoshi-font weight-700">our recent works</h2>
 				</div>
 				<div class="recent-works__header--right"></div>

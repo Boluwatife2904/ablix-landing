@@ -1,9 +1,6 @@
-<script lang="ts" setup>
-const { deviceWidth } = useDeviceType()
-</script>
+<script lang="ts" setup></script>
 
 <template>
-    {{ deviceWidth }}
 	<HomeRecentWorks />
 	<HomeProcess />
 	<HomeTestimonials />
