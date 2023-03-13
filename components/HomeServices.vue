@@ -33,12 +33,15 @@ const services = [
 	@media screen and (min-width: 992px) {
 		padding: 15rem 0 7rem;
 		grid-template-columns: repeat(2, 1fr);
-		// gap: 11rem;
 	}
 
 	&__header {
 		max-width: 30.5rem;
 		margin-bottom: 2.8rem;
+
+        @media screen and (min-width: 600px) {
+			max-width: 35.8rem;
+        }
 
 		@media screen and (min-width: 992px) {
 			max-width: 46.8rem;
