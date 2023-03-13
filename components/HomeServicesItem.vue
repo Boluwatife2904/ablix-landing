@@ -15,7 +15,7 @@ defineProps<Props>();
 	<div class="service-item flex space-between">
 		<div class="service-item__left">
 			<h3 class="service-item__title heading-3 satoshi-font weight-700 text-uppercase">{{ service.title }}</h3>
-			<p class="paragraph-1 text-paragraph">{{ service.content }}</p>
+			<p class="service-item__body paragraph-1 text-paragraph">{{ service.content }}</p>
 		</div>
 		<div class="service-item__right">
 			<a href="#" title="Learn More" class="text-black weight-600 paragraph-1">Learn More</a>
@@ -43,6 +43,18 @@ defineProps<Props>();
 
 		@media screen and (min-width: 600px) {
 			margin-bottom: 1.8rem;
+		}
+	}
+
+	&__body {
+        max-width: 19.7rem;
+
+        @media screen and (min-width: 500px) {
+			max-width: 35.6rem;
+		}
+        
+		@media screen and (min-width: 992px) {
+			max-width: 100%;
 		}
 	}
 
