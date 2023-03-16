@@ -6,18 +6,28 @@ const navbarLinks = [
 	{ name: "reviews", title: "Reviews" },
 	{ name: "contact-us", title: "Contact us" },
 ];
+
+const navbarIsOpen = ref(false);
+
+const toggleNavbar = () => (navbarIsOpen.value = !navbarIsOpen.value);
 </script>
 
 <template>
 	<header class="base-header">
 		<nav class="navbar flex items-center space-between container">
-			<NuxtLink :to="{ name: 'index' }"> <IconsAblixLogo /> </NuxtLink>
+			<NuxtLink :to="{ name: 'index' }" class="navbar__logo"> <IconsAblixLogo /> </NuxtLink>
 
-			<ul class="navbar__links flex items-center">
+			<ul class="navbar__links items-center">
 				<li v-for="link in navbarLinks" :key="link.name" class="navbar__link-item">
 					<NuxtLink class="navbar__link" :class="{ 'navbar__link--active': $route.name === link.name }" :to="{ name: link.name }">{{ link.title }}</NuxtLink>
 				</li>
 			</ul>
+
+			<button class="navbar__toggler flex flex-column" :class="{ 'navbar__toggler--active': navbarIsOpen }" @click="toggleNavbar">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
 		</nav>
 	</header>
 </template>
@@ -29,8 +39,17 @@ const navbarLinks = [
 }
 
 .navbar {
+	&__logo {
+		line-height: 0;
+	}
+
 	&__links {
+		display: none;
 		gap: 5.2rem;
+
+		@media screen and (min-width: 768px) {
+			display: flex;
+		}
 	}
 
 	&__link {
@@ -43,6 +62,42 @@ const navbarLinks = [
 		&:hover {
 			font-weight: 600;
 			color: var(--black-color);
+		}
+	}
+
+	&__toggler {
+		display: flex;
+		gap: 0.5rem;
+		// overflow: hidden;
+
+		span {
+			background-color: var(--black-color);
+			width: 3rem;
+			height: 0.4rem;
+			border-radius: 1rem;
+			transition: all 0.3s;
+		}
+
+		&--active {
+			span {
+				&:first-child {
+					transform: translate(0rem, 0.8rem) rotate(45deg);
+				}
+
+				&:nth-child(2) {
+					transform: translateX(-3rem);
+					opacity: 0;
+					visibility: hidden;
+				}
+
+				&:last-child {
+					transform: translate(0rem, -1rem) rotate(-45deg);
+				}
+			}
+		}
+
+		@media screen and (min-width: 768px) {
+			display: none;
 		}
 	}
 }
