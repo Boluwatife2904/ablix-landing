@@ -11,7 +11,7 @@ const { isOnMobile } = useDeviceType();
 					let’s work on <br />
 					something cool together
 				</h2>
-				<BaseButton> <IconsArrow :size="isOnMobile ? '16' : '36'" /> </BaseButton>
+				<BaseButton title="Contact Us"> <IconsArrow :size="isOnMobile ? '16' : '36'" /> </BaseButton>
 			</div>
 		</div>
 	</section>

@@ -15,7 +15,7 @@ const toggleNavbar = () => (navbarIsOpen.value = !navbarIsOpen.value);
 <template>
 	<header class="base-header">
 		<nav class="navbar flex items-center space-between container">
-			<NuxtLink :to="{ name: 'index' }" class="navbar__logo"> <IconsAblixLogo /> </NuxtLink>
+			<NuxtLink :to="{ name: 'index' }" class="navbar__logo" title="Ablix Studio Logo"> <IconsAblixLogo /> </NuxtLink>
 
 			<ul class="navbar__links items-center">
 				<li v-for="link in navbarLinks" :key="link.name" class="navbar__link-item">

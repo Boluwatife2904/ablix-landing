@@ -20,10 +20,10 @@ const rightButtonFill = ref("#110804");
 					<HomeTestimonialItem v-for="testimonial in testimonials" :key="testimonial.name" :testimonial="testimonial" />
 				</div>
 				<div class="testimonials__buttons flex">
-					<BaseButton button-size="rounded-small" variant="outline-grey" @mouseover="leftButtonFill = 'white'" @mouseout="leftButtonFill = '#110804'">
+					<BaseButton button-size="rounded-small" variant="outline-grey" @mouseover="leftButtonFill = 'white'" @mouseout="leftButtonFill = '#110804'" title="Previous">
 						<IconsArrow :size="isOnMobile ? '12' : '16'" variant="left" :fill="leftButtonFill" />
 					</BaseButton>
-					<BaseButton button-size="rounded-small" variant="outline-grey" @mouseover="rightButtonFill = 'white'" @mouseout="rightButtonFill = '#110804'">
+					<BaseButton button-size="rounded-small" variant="outline-grey" @mouseover="rightButtonFill = 'white'" @mouseout="rightButtonFill = '#110804'" title="Next">
 						<IconsArrow :size="isOnMobile ? '12' : '16'" variant="right" :fill="rightButtonFill" />
 					</BaseButton>
 				</div>

@@ -32,7 +32,7 @@ const end = (element: any) => {
 	<div class="process" :class="{ 'process--active': isActive }">
 		<div class="process__header flex space-between">
 			<h4 class="heading-4 process__title text-thin-2">{{ process.number }}. {{ process.title }}</h4>
-			<BaseButton button-size="rounded-smallest" @click="$emit('toggle-process', process.number)">
+			<BaseButton button-size="rounded-smallest" @click="$emit('toggle-process', process.number)" :title="`${isActive ? 'Hide' : 'Show'} Process`">
 				<IconsAccordion :variant="isActive ? 'opened' : 'closed'" />
 			</BaseButton>
 		</div>
