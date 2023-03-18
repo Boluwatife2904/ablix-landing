@@ -19,7 +19,7 @@ defineProps<Props>();
 		</div>
 		<div class="recent-work__content">
 			<h3 class="heading-3 satoshi-font text-black text-uppercase weight-700 recent-work__title">{{ work.title }}</h3>
-			<p class="paragraph-1 text-paragraph recent-work__body">{{ work.body }}</p>
+			<p class="paragraph-1 text-paragraph recent-work__body">{{ work.body }} <span>Check out our latest design of website and see how it is.</span></p>
 		</div>
 	</div>
 </template>
@@ -32,6 +32,14 @@ defineProps<Props>();
 		}
 	}
 
+	&:not(:first-child) {
+		span {
+			@media screen and (min-width: 992px) {
+				display: none;
+			}
+		}
+	}
+
 	&__image {
 		height: 100%;
 		max-height: 17.9rem;
@@ -39,7 +47,7 @@ defineProps<Props>();
 
 		@media screen and (min-width: 600px) {
 			margin-bottom: 2.2rem;
-            height: initial;
+			height: initial;
 			max-height: initial;
 		}
 
@@ -49,7 +57,7 @@ defineProps<Props>();
 			width: 100%;
 
 			@media screen and (min-width: 600px) {
-                max-height: initial;
+				max-height: initial;
 			}
 		}
 	}
@@ -64,6 +72,10 @@ defineProps<Props>();
 
 	&__body {
 		@media screen and (min-width: 800px) {
+			max-width: 85%;
+		}
+
+		@media screen and (min-width: 992px) {
 			max-width: 58%;
 		}
 	}

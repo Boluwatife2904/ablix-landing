@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const recentWorks = [
-	{ image: "/website-design.png", title: "website design", body: "Saving World with Good Designs. Because your satisfaction is everything. Check out our latest design of website and see how it is." },
+	{ image: "/website-design.png", title: "website design", body: "Saving World with Good Designs. Because your satisfaction is everything." },
 	{ image: "/website-development.png", title: "website development", body: "Saving World with Good Designs. Because your satisfaction is everything." },
 	{ image: "/branding-logo.png", title: "branding logo", body: "Saving World with Good Designs. Because your satisfaction is everything." },
 ];
