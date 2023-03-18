@@ -9,7 +9,7 @@ export default defineNuxtConfig({
 			charset: "UTF-8",
 			viewport: "width=device-width, initial-scale=1.0",
 			meta: [
-				{ hid: "theme_color", name: "theme_color", content: "#fe7e41" },
+				{ hid: "theme_color", name: "theme-color", content: "#fe7e41" },
 				{ hid: "description", name: "description", content: "Saving World with Good Designs. Because your satisfaction is everything." },
 				{ hid: "og:description", name: "og:description", content: "Saving World with Good Designs. Because your satisfaction is everything." },
 				{ hid: "og:title", name: "og:title", content: "Ablix Studio" },
