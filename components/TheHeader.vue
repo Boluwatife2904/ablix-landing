@@ -68,7 +68,6 @@ const toggleNavbar = () => (navbarIsOpen.value = !navbarIsOpen.value);
 	&__toggler {
 		display: flex;
 		gap: 0.5rem;
-		// overflow: hidden;
 
 		span {
 			background-color: var(--black-color);
