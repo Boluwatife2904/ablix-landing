@@ -15,7 +15,7 @@ defineProps<Props>();
 <template>
 	<div class="recent-work">
 		<div class="recent-work__image">
-			<img :src="work.image" :alt="work.title" />
+			<NuxtImg :src="work.image" :alt="work.title" loading="lazy" format="webp" quality="100" />
 		</div>
 		<div class="recent-work__content">
 			<h3 class="heading-3 satoshi-font text-black text-uppercase weight-700 recent-work__title">{{ work.title }}</h3>

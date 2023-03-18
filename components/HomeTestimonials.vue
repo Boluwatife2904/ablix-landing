@@ -29,7 +29,7 @@ const rightButtonFill = ref("#110804");
 				</div>
 			</div>
 			<div class="testimonials__right">
-				<img class="testimonials__image block" src="/map.png" alt="Map IMage" />
+				<NuxtImg class="testimonials__image block" src="/map.png" alt="Map Image" loading="lazy" format="webp" quality="100" />
 			</div>
 		</div>
 	</section>

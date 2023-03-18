@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-    app: {
+	app: {
 		head: {
 			htmlAttrs: {
 				lang: "en",
@@ -20,5 +20,6 @@ export default defineNuxtConfig({
 			],
 		},
 	},
+	modules: ["@nuxt/image-edge"],
 	css: ["@/assets/scss/main.scss", "@/assets/font.scss"],
 });

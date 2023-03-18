@@ -17,7 +17,7 @@ defineProps<Props>();
 <template>
 	<div class="testimonial flex">
 		<div class="testimonial__left">
-			<img :src="testimonial.image" :alt="testimonial.image" class="testimonial__image" />
+			<NuxtImg :src="testimonial.image" :alt="testimonial.image" class="testimonial__image" loading="lazy" format="webp" quality="100" />
 		</div>
 		<div class="testimonial__right">
 			<h6 class="testimonial__name weight-500 heading-6">{{ testimonial.name }}</h6>

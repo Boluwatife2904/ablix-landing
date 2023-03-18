@@ -14,7 +14,7 @@ const services = [
 				<p class="paragraph-2 text-uppercase text-light-grey">our services</p>
 				<h2 class="heading-2 text-black text-uppercase weight-700 satoshi-font our-services__header">come on, we will help you buIld your dream project.</h2>
 				<div class="our-services__image">
-					<img src="/our-services.png" alt="Our services image" />
+					<NuxtImg src="/our-services.png" alt="Our services image" loading="lazy" format="webp" quality="100" />
 				</div>
 			</div>
 			<div class="our-services__right">
