@@ -23,6 +23,14 @@ const toggleNavbar = () => (navbarIsOpen.value = !navbarIsOpen.value);
 				</li>
 			</ul>
 
+			<transition name="slidein" mode="out-in" appear>
+				<ul v-if="navbarIsOpen" class="navbar-mobile__links flex flex-column">
+					<li v-for="link in navbarLinks" :key="link.name" class="navbar-mobile__link-item">
+						<NuxtLink class="navbar__link flex items-center" :class="{ 'navbar__link--active': $route.name === link.name }" :to="{ name: link.name }">{{ link.title }}  <IconsArrow size="12" fill="var(--black-color)" /> </NuxtLink>
+					</li>
+				</ul>
+			</transition>
+
 			<button class="navbar__toggler flex flex-column" :class="{ 'navbar__toggler--active': navbarIsOpen }" @click="toggleNavbar">
 				<span></span>
 				<span></span>
@@ -36,6 +44,7 @@ const toggleNavbar = () => (navbarIsOpen.value = !navbarIsOpen.value);
 .base-header {
 	padding: 3.4rem 0;
 	margin-bottom: 4.4rem;
+	position: relative;
 }
 
 .navbar {
@@ -57,10 +66,11 @@ const toggleNavbar = () => (navbarIsOpen.value = !navbarIsOpen.value);
 		line-height: 2.6rem;
 		color: #897c76;
 		transition: all 0.3s ease-in-out;
+        gap: 1.4rem;
 
 		&--active,
 		&:hover {
-			font-weight: 600;
+			font-weight: 500;
 			color: var(--black-color);
 		}
 	}
@@ -93,6 +103,27 @@ const toggleNavbar = () => (navbarIsOpen.value = !navbarIsOpen.value);
 					transform: translate(0rem, -1rem) rotate(-45deg);
 				}
 			}
+		}
+
+		@media screen and (min-width: 768px) {
+			display: none;
+		}
+	}
+}
+
+.navbar-mobile {
+	&__links {
+		position: absolute;
+		top: 8rem;
+		left: 0;
+		width: 100%;
+		line-height: auto;
+		padding: 1rem 2rem 4rem;
+		gap: 1.6rem;
+		background-color: #faf5ef;
+
+		@media screen and (min-width: 600px) {
+			padding: 1rem 3.2rem 4rem;
 		}
 
 		@media screen and (min-width: 768px) {
