@@ -1,6 +1,7 @@
 <script lang="ts" setup></script>
 
 <template>
+    <HomeHero />
     <HomeServices />
 	<HomeRecentWorks />
 	<HomeProcess />

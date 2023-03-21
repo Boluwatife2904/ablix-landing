@@ -9,6 +9,11 @@ body {
 	font-family: "Satoshi", sans-serif;
 }
 
+.heading-1 {
+	@include font-sizing(3.6rem, 4.6rem, 4rem, 4.8rem, 7rem, 8rem);
+	letter-spacing: -0.02em;
+}
+
 .heading-2 {
 	@include font-sizing(2.6rem, 3.6rem, 3rem, 3.8rem, 4rem, 5rem);
 	letter-spacing: -0.02em;
