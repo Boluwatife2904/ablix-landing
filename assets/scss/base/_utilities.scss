@@ -6,6 +6,10 @@
 	align-items: center;
 }
 
+.content-center {
+	justify-content: center;
+}
+
 // Display classes
 $displays: flex, block, grid;
 @each $display in $displays {
@@ -63,11 +67,11 @@ $text-transforms: uppercase, capitalize;
 }
 
 .text-thin-2 {
-    color: var(--thin-2-color);
+	color: var(--thin-2-color);
 }
 
 .text-thin-3 {
-    color: var(--thin-3-color);
+	color: var(--thin-3-color);
 }
 
 .container {
