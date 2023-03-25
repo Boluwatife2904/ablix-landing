@@ -8,7 +8,7 @@ interface ButtonProps {
 const props = withDefaults(defineProps<ButtonProps>(), {
 	buttonSize: "rounded-large",
 	variant: "solid-orange",
-	hasBorder: true,
+	hasBorder: false,
 });
 
 const buttonClasses = computed(() => {
