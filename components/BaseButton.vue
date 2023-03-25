@@ -2,11 +2,13 @@
 interface ButtonProps {
 	buttonSize?: string;
 	variant?: string;
+	hasBorder: boolean;
 }
 
 const props = withDefaults(defineProps<ButtonProps>(), {
 	buttonSize: "rounded-large",
 	variant: "solid-orange",
+	hasBorder: true,
 });
 
 const buttonClasses = computed(() => {
@@ -18,7 +20,7 @@ const buttonClasses = computed(() => {
 </script>
 
 <template>
-	<button class="base-button" :class="buttonClasses">
+	<button class="base-button" :class="[...buttonClasses, { 'base-button--bordered': hasBorder }]">
 		<slot></slot>
 	</button>
 </template>
@@ -38,7 +40,8 @@ const buttonClasses = computed(() => {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-    flex-shrink: 0;
+	flex-shrink: 0;
+	position: relative;
 
 	&--rounded-large {
 		border-radius: 50%;
@@ -50,9 +53,23 @@ const buttonClasses = computed(() => {
 		@include button-size(2.8rem, 2.8rem, 4.4rem, 4.4rem);
 	}
 
-    &--rounded-smallest {
+	&--rounded-smallest {
 		border-radius: 50%;
 		@include button-size(2.4rem, 2.4rem, 2.4rem, 2.4rem);
+	}
+
+	&--flat-medium {
+		font-weight: 500;
+		font-size: 1.2rem;
+		line-height: 2rem;
+		padding: 1rem 2.5rem;
+
+		@media screen and (min-width: 600px) {
+			font-weight: 600;
+			padding: 1.5rem 5.5rem;
+			font-size: 1.6rem;
+			line-height: 2.6rem;
+		}
 	}
 
 	&--solid-orange {
@@ -68,6 +85,24 @@ const buttonClasses = computed(() => {
 		&:hover {
 			background-color: var(--primary-color);
 			color: #fff;
+		}
+	}
+
+	&--bordered {
+		&::after {
+			position: absolute;
+			content: "";
+			height: 100%;
+			width: 100%;
+			border: 1px solid #110804;
+			top: 0.6rem;
+			left: 0.6em;
+			z-index: -1;
+
+			@media screen and (min-width: 600px) {
+				top: 1rem;
+				left: 1rem;
+			}
 		}
 	}
 }

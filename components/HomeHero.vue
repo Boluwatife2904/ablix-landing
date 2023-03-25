@@ -20,6 +20,7 @@
 						</li>
 					</ul>
 					<p class="home-hero__paragraph text-paragraph">Saving World with Good Designs. Because your satisfaction is everything. We are providing the best designs.</p>
+					<BaseButton class="home-hero__cta text-uppercase" button-size="flat-medium">start a project</BaseButton>
 				</div>
 				<div class="home-hero__right"></div>
 			</div>
@@ -83,6 +84,11 @@
 
 	&__paragraph {
 		@include font-sizing(1.4rem, 2.4rem, 1.6rem, 2.6rem, 1.6rem, 2.6rem);
+		margin-bottom: 2.8rem;
+
+		@media screen and (min-width: 600px) {
+			margin-bottom: 3.8rem;
+		}
 	}
 }
 </style>
