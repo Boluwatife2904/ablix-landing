@@ -10,6 +10,14 @@
 	justify-content: center;
 }
 
+// Position classes
+$positions: relative, absolute;
+@each $position in $positions {
+	.position-#{$position} {
+		position: $position;
+	}
+}
+
 // Display classes
 $displays: flex, block, grid;
 @each $display in $displays {

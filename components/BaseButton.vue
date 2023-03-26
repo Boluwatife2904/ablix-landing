@@ -2,7 +2,7 @@
 interface ButtonProps {
 	buttonSize?: string;
 	variant?: string;
-	hasBorder: boolean;
+	hasBorder?: boolean;
 }
 
 const props = withDefaults(defineProps<ButtonProps>(), {

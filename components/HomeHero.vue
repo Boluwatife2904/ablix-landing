@@ -1,4 +1,10 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const { isOnMobile } = useDeviceType();
+
+const buttonFill = ref("#110804");
+
+const scroll = () => window.scrollBy(0, 500);
+</script>
 
 <template>
 	<section class="container">
@@ -8,7 +14,7 @@
 				<h1 class="text-uppercase heading-1 satoshi-font weight-700">saving world with good designs.</h1>
 			</div>
 			<div class="home-hero__bottom">
-				<div class="home-hero__left">
+				<div class="home-hero__left position-relative">
 					<ul class="home-hero__list flex flex-wrap">
 						<li class="home-hero__list-item paragraph-2 flex items-center">
 							<div class="home-hero__list-item__icon flex items-center content-center"><IconsCheck /></div>
@@ -20,7 +26,13 @@
 						</li>
 					</ul>
 					<p class="home-hero__paragraph text-paragraph">Saving World with Good Designs. Because your satisfaction is everything. We are providing the best designs.</p>
-					<BaseButton class="home-hero__cta text-uppercase" button-size="flat-medium">start a project</BaseButton>
+					<BaseButton class="home-hero__cta text-uppercase" button-size="flat-medium" :has-border="true">start a project</BaseButton>
+					<BaseButton variant="outline-grey" button-size="rounded-small" class="scroll-down__button" @mouseover="buttonFill = 'white'" @mouseout="buttonFill = '#110804'" @click.native="scroll">
+						<IconsArrow :size="isOnMobile ? '12' : '16'" variant="down" :fill="buttonFill" />
+					</BaseButton>
+                    <span class="position-absolute green-arrow">
+                        <IconsGreenArrow />
+                    </span>
 				</div>
 				<div class="home-hero__right"></div>
 			</div>
@@ -30,6 +42,13 @@
 
 <style lang="scss" scoped>
 .home-hero {
+	border-bottom: 2px dashed #e7dfd7;
+	padding-bottom: 2.8rem;
+
+	@media screen and (min-width: 600px) {
+		padding-bottom: 7rem;
+	}
+
 	&__subheading {
 		margin-bottom: 0.5rem;
 	}
@@ -90,5 +109,24 @@
 			margin-bottom: 3.8rem;
 		}
 	}
+
+	&__cta {
+		@media screen and (min-width: 600px) {
+			margin-bottom: 11.6rem;
+		}
+	}
+}
+
+.scroll-down__button {
+	display: none;
+
+	@media screen and (min-width: 600px) {
+		display: flex;
+	}
+}
+
+.green-arrow {
+    bottom: 7rem;
+    right: -12rem;
 }
 </style>
