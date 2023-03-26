@@ -30,7 +30,7 @@ defineProps<Props>();
 	&:not(:last-child) {
 		padding-bottom: 1.8rem;
 		margin-bottom: 1.8rem;
-		border-bottom: 1px solid #d8d0c7;
+		border-bottom: 0.1rem solid #d8d0c7;
 
 		@media screen and (min-width: 600px) {
 			padding-bottom: 4.8rem;

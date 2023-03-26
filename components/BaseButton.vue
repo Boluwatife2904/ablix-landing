@@ -78,7 +78,7 @@ const buttonClasses = computed(() => {
 	}
 
 	&--outline-grey {
-		border: 1px solid #d8d0c7;
+		border: 0.1rem solid #d8d0c7;
 		background-color: transparent;
 		color: #110804;
 
@@ -94,7 +94,7 @@ const buttonClasses = computed(() => {
 			content: "";
 			height: 100%;
 			width: 100%;
-			border: 1px solid #110804;
+			border: 0.1rem solid #110804;
 			top: 0.6rem;
 			left: 0.6em;
 			z-index: -1;

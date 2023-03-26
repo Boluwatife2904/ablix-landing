@@ -28,7 +28,7 @@ const services = [
 .our-services {
 	padding: 7rem 0 2.8rem;
 	gap: 1.8rem 11rem;
-	border-bottom: 2px dashed #e7dfd7;
+	border-bottom: 0.2rem dashed #e7dfd7;
 
 	@media screen and (min-width: 992px) {
 		padding: 15rem 0 7rem;

@@ -39,7 +39,7 @@ const rightButtonFill = ref("#110804");
 .testimonials {
 	padding-bottom: 7rem;
 	align-items: center;
-	border-bottom: 2px dashed #e7dfd7;
+	border-bottom: 0.2rem dashed #e7dfd7;
 	gap: 2.8rem;
 	margin-bottom: 7rem;
 

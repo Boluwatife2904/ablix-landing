@@ -13,7 +13,7 @@ const scroll = () => window.scrollBy(0, 500);
 				<small class="home-hero__subheading text-uppercase paragraph-1 text-light-grey">😎 GIVING YOU THE BEST DESIGNS</small>
 				<h1 class="text-uppercase heading-1 satoshi-font weight-700">saving world with good designs.</h1>
 			</div>
-			<div class="home-hero__bottom">
+			<div class="home-hero__bottom grid">
 				<div class="home-hero__left position-relative">
 					<ul class="home-hero__list flex flex-wrap">
 						<li class="home-hero__list-item paragraph-2 flex items-center">
@@ -30,11 +30,18 @@ const scroll = () => window.scrollBy(0, 500);
 					<BaseButton variant="outline-grey" button-size="rounded-small" class="scroll-down__button" @mouseover="buttonFill = 'white'" @mouseout="buttonFill = '#110804'" @click.native="scroll">
 						<IconsArrow :size="isOnMobile ? '12' : '16'" variant="down" :fill="buttonFill" />
 					</BaseButton>
-                    <span class="position-absolute green-arrow">
-                        <IconsGreenArrow />
-                    </span>
+					<span class="position-absolute green-arrow">
+						<IconsGreenArrow />
+					</span>
 				</div>
-				<div class="home-hero__right"></div>
+				<div class="home-hero__right position-relative">
+					<div class="home-hero__image">
+						<NuxtImg src="/hero-image.png" format="webp" quality="100" />
+					</div>
+					<button class="play-button position-absolute flex items-center content-center">
+						<IconsPlay />
+					</button>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -111,8 +118,30 @@ const scroll = () => window.scrollBy(0, 500);
 	}
 
 	&__cta {
-		@media screen and (min-width: 600px) {
+		@media screen and (min-width: 992px) {
 			margin-bottom: 11.6rem;
+		}
+	}
+
+	&__bottom {
+		gap: 4.5rem 18.5rem;
+
+		@media screen and (min-width: 992px) {
+			justify-content: space-between;
+			grid-template-columns: 38.7rem auto;
+		}
+	}
+
+	&__image {
+		@media screen and (min-width: 992px) {
+			height: 44rem;
+		}
+
+		img {
+			display: block;
+			min-height: 100%;
+			width: 100%;
+			object-fit: fill;
 		}
 	}
 }
@@ -120,13 +149,43 @@ const scroll = () => window.scrollBy(0, 500);
 .scroll-down__button {
 	display: none;
 
-	@media screen and (min-width: 600px) {
+	@media screen and (min-width: 992px) {
 		display: flex;
 	}
 }
 
 .green-arrow {
-    bottom: 7rem;
-    right: -12rem;
+	bottom: 7rem;
+	right: -10.5rem;
+	display: none;
+
+	@media screen and (min-width: 992px) {
+		display: block;
+	}
+}
+
+.play-button {
+	top: 50%;
+	left: 50%;
+	background: rgba(44, 37, 54, 0.6);
+	transform: translate(-50%, -50%);
+	height: 3.4rem;
+	width: 3.4rem;
+	border-radius: 50%;
+
+	@media screen and (min-width: 992px) {
+		height: 7.2rem;
+		width: 7.2rem;
+	}
+
+	svg {
+		height: 1rem;
+		width: 1rem;
+
+		@media screen and (min-width: 992px) {
+			height: 2.4rem;
+			width: 2.4rem;
+		}
+	}
 }
 </style>
