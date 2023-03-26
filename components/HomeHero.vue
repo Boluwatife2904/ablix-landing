@@ -147,7 +147,7 @@ const scroll = () => window.scrollBy(0, 500);
 }
 
 .scroll-down__button {
-	display: none;
+	display: none !important;
 
 	@media screen and (min-width: 992px) {
 		display: flex;
