@@ -26,7 +26,7 @@ const toggleNavbar = () => (navbarIsOpen.value = !navbarIsOpen.value);
 			<transition name="slidein" mode="out-in" appear>
 				<ul v-if="navbarIsOpen" class="navbar-mobile__links flex flex-column">
 					<li v-for="link in navbarLinks" :key="link.name" class="navbar-mobile__link-item">
-						<NuxtLink class="navbar__link flex items-center" :class="{ 'navbar__link--active': $route.name === link.name }" :to="{ name: link.name }">{{ link.title }}  <IconsArrow size="12" fill="var(--black-color)" /> </NuxtLink>
+						<NuxtLink class="navbar__link flex items-center" :class="{ 'navbar__link--active': $route.name === link.name }" :to="{ name: link.name }">{{ link.title }} <IconsArrow size="12" fill="var(--black-color)" /> </NuxtLink>
 					</li>
 				</ul>
 			</transition>
@@ -42,9 +42,12 @@ const toggleNavbar = () => (navbarIsOpen.value = !navbarIsOpen.value);
 
 <style lang="scss" scoped>
 .base-header {
-	padding: 3.4rem 0;
-	margin-bottom: 4.4rem;
 	position: relative;
+    padding: 3.4rem 0;
+
+	@media screen and (min-width: 992px) {
+		margin-bottom: 4.4rem;
+	}
 }
 
 .navbar {
@@ -66,7 +69,7 @@ const toggleNavbar = () => (navbarIsOpen.value = !navbarIsOpen.value);
 		line-height: 2.6rem;
 		color: #897c76;
 		transition: all 0.3s ease-in-out;
-        gap: 1.4rem;
+		gap: 1.4rem;
 
 		&--active,
 		&:hover {
@@ -82,7 +85,7 @@ const toggleNavbar = () => (navbarIsOpen.value = !navbarIsOpen.value);
 		span {
 			background-color: var(--black-color);
 			width: 3rem;
-			height: 0.4rem;
+			height: 0.3rem;
 			border-radius: 1rem;
 			transition: all 0.3s;
 		}
@@ -90,7 +93,7 @@ const toggleNavbar = () => (navbarIsOpen.value = !navbarIsOpen.value);
 		&--active {
 			span {
 				&:first-child {
-					transform: translate(0rem, 0.8rem) rotate(45deg);
+					transform: translate(0rem, 0.6rem) rotate(45deg);
 				}
 
 				&:nth-child(2) {
@@ -118,9 +121,10 @@ const toggleNavbar = () => (navbarIsOpen.value = !navbarIsOpen.value);
 		left: 0;
 		width: 100%;
 		line-height: auto;
-		padding: 1rem 2rem 4rem;
+		padding: 1rem 2rem 3rem;
 		gap: 1.6rem;
 		background-color: #faf5ef;
+        z-index: 1;
 
 		@media screen and (min-width: 600px) {
 			padding: 1rem 3.2rem 4rem;
