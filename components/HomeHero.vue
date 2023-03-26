@@ -150,7 +150,7 @@ const scroll = () => window.scrollBy(0, 500);
 	display: none !important;
 
 	@media screen and (min-width: 992px) {
-		display: flex;
+		display: flex !important;
 	}
 }
 
