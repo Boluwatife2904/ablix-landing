@@ -33,7 +33,7 @@ body {
 }
 
 .paragraph-1 {
-	@include font-sizing(1.2rem, 2rem, 1.4rem, 2.4rem, 1.6rem, 2.6rem);
+	@include font-sizing(1rem, 2rem, 1.4rem, 2.4rem, 1.6rem, 2.6rem);
 }
 
 .paragraph-2 {
@@ -41,5 +41,5 @@ body {
 }
 
 .body-small {
-	@include font-sizing(1.2rem, 2rem, 1.4rem, 2.4rem, 1.4rem, 2.4rem);
+	@include font-sizing(1rem, 2rem, 1.4rem, 2.4rem, 1.4rem, 2.4rem);
 }
