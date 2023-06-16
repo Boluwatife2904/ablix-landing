@@ -9,7 +9,7 @@
   },
   "devDependencies": {
     "@nuxt/image-edge": "^1.0.0-27968280.9739e4d",
-    "nuxt": "^3.1.2",
+    "nuxt": "^3.5.3",
     "sass": "^1.58.0"
   }
 }

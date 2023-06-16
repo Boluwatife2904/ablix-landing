@@ -31,7 +31,7 @@ const toggleNavbar = () => (navbarIsOpen.value = !navbarIsOpen.value);
 				</ul>
 			</transition>
 
-			<button class="navbar__toggler flex flex-column" :class="{ 'navbar__toggler--active': navbarIsOpen }" @click="toggleNavbar">
+			<button class="navbar__toggler flex flex-column" :class="{ 'navbar__toggler--active': navbarIsOpen }" aria-label="Navbar Toggle" @click="toggleNavbar">
 				<span></span>
 				<span></span>
 				<span></span>
