@@ -82,5 +82,13 @@ const rightButtonFill = ref("#110804");
 	&__image {
 		margin: 0 auto;
 	}
+
+	&__right {
+		img {
+			display: block;
+			min-height: 100%;
+			width: 100%;
+		}
+	}
 }
 </style>

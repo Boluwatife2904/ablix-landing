@@ -36,7 +36,7 @@ const scroll = () => window.scrollBy(0, 500);
 				</div>
 				<div class="home-hero__right position-relative">
 					<div class="home-hero__image">
-						<NuxtImg src="/hero-image.png" alt="Hero Section Image" format="webp" quality="100" height="100" width="100" />
+						<NuxtImg src="/hero-image.png" alt="Hero Section Image" format="webp" quality="100" />
 					</div>
 					<button class="play-button position-absolute flex items-center content-center" aria-label="Play">
 						<IconsPlay />
